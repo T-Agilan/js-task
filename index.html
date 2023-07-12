@@ -1,4 +1,5 @@
-<!-- <h1>Welcome.....!!!</h1> -->
+<p id ="demo"></p>
+
 <script>
   //   let car = ["hyundai", "chevorlet", "audi", "jaguar"];
   //   let car1 = ["venue", "creta", "thar"];
@@ -8,49 +9,102 @@
 
   // <------------------------------------------slice------------------------------------------>
 
-//   let number1 = [55, 12, 78, 1, 10, 45, 69];
+  //   let number1 = [55, 12, 78, 1, 10, 45, 69];
   // let number2 = [13,]
   // let result = number1.slice(2,5)
   //   console.log(result);
 
   // <---------------------------------------------reverse sorting--------------------------------->
 
-//   let alpha = ["python", "Html", "Css", "java", "Mongodb", "c++"];
-//   let report = alpha.reverse();
-//   console.log(report);
+  //   let alpha = ["python", "Html", "Css", "java", "Mongodb", "c++"];
+  //   let report = alpha.reverse();
+  //   console.log(report);
 
   // <-------------------------------------------------numerical sorting---------------------------->
 
-//   let num1 = [2, 56, 13, 85, 78, 14, 23, 14, 21];
-//   let result = num1.sort(function (a, b) {
-//     return a - b;
-//   });
-//   console.log(result);
+  //   let num1 = [2, 56, 13, 85, 78, 14, 23, 14, 21];
+  //   let result = num1.sort(function (a, b) {
+  //     return a - b;
+  //   });
+  //   console.log(result);
 
   //   <----------------------------------------------------flat---------------------------------------->
 
-//   let value = [
-//     [3, 5],
-//     [6, 6],
-//     [2, 1],
-//     [8, 7],
-//   ];
-//   let fvalue = value.flat();
-//   console.log(fvalue);
+  //   let value = [
+  //     [3, 5],
+  //     [6, 6],
+  //     [2, 1],
+  //     [8, 7],
+  //   ];
+  //   let fvalue = value.flat();
+  //   console.log(fvalue);
 
   // <------------------------------------------------------odd or even task------------------------------->
 
-  let num = [1, 2, 3, 4, 5, 6, 7, 8, 9,10];
-  let odd = [];
-  let even = [];
+  //   let num = [1, 2, 3, 4, 5, 6, 7, 8, 9,10];
+  //   let odd = [];
+  //   let even = [];
 
-  for ( let i = 0; i <= 9; i++) {
-    if (num[i] % 2 == 0)
-     odd.push(num[i]);
-    else
-    even.push(num[i]);
-  }
-  console.log(odd)
-  console.log(even)
+  //   for ( let i = 0; i <= 9; i++) {
+  //     if (num[i] % 2 == 0)
+  //      odd.push(num[i]);
+  //     else
+  //     even.push(num[i]);
+  //   }
+  //   console.log(odd)
+  //   console.log(even)
 
+  //   <-------------------------------------------------sum array------------------------------------>
+
+  //   let a = [55, 12, 63, 10, 8, 65, 45];
+  //   let b = [69, 78, 10, 56, 7, 18, 41];
+  //   // let x = [];
+  //   let odd = [];
+  //   let even = [];
+  //   let y = a.concat(b);
+  //   let sumodd = 0;
+  //   let sumeven = 0;
+  // let x = (a + b)
+  // for(let i = 0; i < a.length;i++){
+
+  //    x[i] = a[i] + b[i] ;
+  // }
+
+  // console.log(x)
+
+  //   for (i = 0; i < y.length; i++) {
+  //     if (y[i] % 2 == 0) {
+  //       console.log(y[i]);
+  //       even.push(y[i]);
+  //       sumeven += y[i];
+  //     } else {
+  //       odd.push(y[i]);
+  //       sumodd += y[i];
+  //     }
+  //   }
+
+  // console.log(y)
+  // console.log(z)
+  //   console.log("Array " +even);
+  //   console.log(odd);
+  //   console.log("sum of odd numbers " + sumodd);
+  //   console.log("sum of even numbers " + sumeven);
+
+  // <------------------------------------------sorting an array using "for loop"---------------------------->
+
+    let a = [31, 10, 5, 51, 78, 45, 33];
+    // document.getElementById("demo").innerHTML = a;
+
+
+ 
+//   let b = [];
+  for (let i = 1; i < a.length; i++)
+    for (let j = 0; j < i; j++)
+      if (a[i] < a[j]) {
+        let x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+      }
+
+  console.log(a);
 </script>
