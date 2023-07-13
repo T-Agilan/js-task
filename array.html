@@ -1,0 +1,40 @@
+<!-- 
+  // <------------------------------------------sorting an array using "for loop"---------------------------->
+<html>
+  <body>
+    <button onclick="ascending()">press here for ascending order</button><br><br>
+    <button onclick="descending()">press here for descending order</button>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+      let a = [31, 10, 5, 51, 78, 45, 33];
+      function ascending(){
+        for (let i = 0; i < a.length; i++){
+          for (let j = 0 ; j < i; j++)
+            if (a[i] < a[j]) {
+              let x = a[i];
+              a[i] = a[j];
+              a[j] = x;
+            }
+            }
+        document.getElementById("demo").innerHTML = a;
+      }
+      function descending() {
+        for (let i = 0; i < a.length; i++){
+          for (let j = 0 ; j < i; j++)
+            if (a[i] > a[j]) {
+              let x = a[i];
+              a[i] = a[j];
+              a[j] = x;
+            }
+            }
+            
+      document.getElementById("demo1").innerHTML =a;
+
+        }
+      
+      console.log(a);
+   
+    </script>
+  </body>
+</html>
