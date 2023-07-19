@@ -1,0 +1,28 @@
+<p id="divide">(6) Find whether the given numbers array is divisible by 7.</p>
+
+<p id="sum">(9)Find the sum of the all array elements.   </p>
+
+<script>
+
+    
+//   --------------finding given number divisible by 7
+const numbers = [35, 14, 70, 49, 21, 56, 7, 42, 28, 63, 49];
+  const divider = numbers.every(divisible);
+  document.getElementById("divide").innerHTML = "6) Find whether the given numbers array is divisible by 7 is ." + divider;
+  function divisible(value) {
+    return value % 7 === 0;
+  }
+// <>
+// <>
+//   --------------------sum of an Array
+  
+  const value = numbers.reduce(myfuncton);
+  document.getElementById("sum").innerHTML =
+    "9) Find the sum of the all array elements is.  "   + value;
+  function myfuncton(total, value) {
+    return total + value;
+  }
+
+
+
+</script>
