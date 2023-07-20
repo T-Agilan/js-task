@@ -1,28 +1,48 @@
+<p id="first element">
+  (3) Find the first element, which is divisible by 10 in the given array.
+</p>
+<p id="array-multiple"></p>
+
 <p id="divide">(6) Find whether the given numbers array is divisible by 7.</p>
 
-<p id="sum">(9)Find the sum of the all array elements.   </p>
+<p id="sum">(9)Find the sum of the all array elements.</p>
 
 <script>
+  const numbers = [35, 14, 70, 49, 21, 56, 7, 42, 28, 63, 49];
 
-    
-//   --------------finding given number divisible by 7
-const numbers = [35, 14, 70, 49, 21, 56, 7, 42, 28, 63, 49];
+  // ------------------------first element divisible by 10
+  const element = numbers.find(remainder);
+  document.getElementById("first element").innerHTML =
+    "3)The first element, which is divisible by 10 in the given array:" +
+    element;
+  function remainder(value) {
+    return value % 10 == 0;
+  }
+
+  // ---------------------------------multiple of three
+  const multiple = numbers.map(array);
+  document.getElementById("array-multiple").innerHTML =
+    "5) Create an new array,  from numbers array multiple of three is :" +
+    multiple;
+  function array(value) {
+    return value * 3;
+  }
+
+  //   --------------finding given number divisible by 7
+
   const divider = numbers.every(divisible);
-  document.getElementById("divide").innerHTML = "6) Find whether the given numbers array is divisible by 7 is ." + divider;
+  document.getElementById("divide").innerHTML =
+    "6) Find whether the given numbers array is divisible by 7 is :" + divider;
   function divisible(value) {
     return value % 7 === 0;
   }
-// <>
-// <>
-//   --------------------sum of an Array
-  
-  const value = numbers.reduce(myfuncton);
+
+  //   --------------------sum of an Array
+
+  const sum = numbers.reduce(myfuncton);
   document.getElementById("sum").innerHTML =
-    "9) Find the sum of the all array elements is.  "   + value;
+    "9) Find the sum of the all array elements is:  " + sum;
   function myfuncton(total, value) {
     return total + value;
   }
-
-
-
 </script>
