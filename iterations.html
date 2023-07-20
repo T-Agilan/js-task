@@ -1,0 +1,106 @@
+<p id="second-largest"></p>
+<p id="for-each"></p>
+<p id="first element"></p>
+<p id="position of array"></p>
+<p id="array-multiple"></p>
+<p id="divide"></p>
+<p id="end-element"></p>
+<p id="array-element-by3"></p>
+<p id="sum"></p>
+<!-- <> -->
+<!-- ,. -->
+<script>
+  const numbers = [35, 14, 70, 49, 21, 56, 7, 42, 28, 63, 49];
+
+  // --------------------------second largest and smallest number.
+
+// <>
+
+
+
+  // -------------------------divisible by 7 using array.forEach
+  const temp = [];
+  str(numbers);
+  function str(txt) {
+    txt.forEach((value) => {
+      if (value % 7 === 0) {
+        temp.push(value);
+      }
+    });
+  }
+
+  document.getElementById("for-each").innerHTML =
+    "2) The element, which is divisible by 7 using forEach loop." + temp;
+
+  // ------------------------first element divisible by 10
+  const element = numbers.find(remainder);
+
+  function remainder(value) {
+    return value % 10 == 0;
+  }
+  document.getElementById("first element").innerHTML =
+    "3) The first element, which is divisible by 10 in the given array:" +
+    element;
+
+  // ------------------------------element position of 7
+
+  const position = numberArray(numbers);
+  function numberArray(numbers) {
+    var value = numbers.indexOf(7);
+    return value;
+  }
+  document.getElementById("position of array").innerHTML =
+    "4) The element position of 7 in number array." + position;
+
+  // ---------------------------------multiple of three
+
+  const multiple = numbers.map(array);
+
+  function array(value) {
+    return value * 3;
+  }
+  document.getElementById("array-multiple").innerHTML =
+    "5) Create an new array,  from numbers array multiple of three is :" +
+    multiple;
+
+  //   --------------finding given number divisible by 7
+
+  const divider = numbers.every(divisible);
+
+  function divisible(value) {
+    return value % 7 === 0;
+  }
+
+  document.getElementById("divide").innerHTML =
+    "6) Find whether the given numbers array is divisible by 7 is :" + divider;
+
+  //   ---------------------endPosition
+
+  const text = endPosition(numbers);
+
+  function endPosition(num) {
+    // var value = numbers.lastIndexOf(49);
+    return num.lastIndexOf(49);
+  }
+  document.getElementById("end-element").innerHTML =
+    "7) The end position of “49” element in the numbers array." + text;
+
+  // -----------------------array element divisibleby3
+
+  const fixed = numbers.some(anyElement);
+  function anyElement(lit) {
+    return lit % 3 === 0;
+  }
+  document.getElementById("array-element-by3").innerHTML =
+    "8) The numbers array has anyone of the element, which is divisible by 3." +
+    fixed;
+
+  //   --------------------sum of an Array
+
+  const sum = numbers.reduce(myfuncton);
+  document.getElementById("sum").innerHTML =
+    "9) Find the sum of the all array elements is:  " + sum;
+  function myfuncton(total, value) {
+    return total + value;
+  }
+</script>
