@@ -4,4 +4,4 @@ let sum = num.reduce(myFunction)
  function myFunction(total,value){
     return total + value;
  }
-  console.log(num.length)
+  console.log(num[0],num[num.length-1],sum)
